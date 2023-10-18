@@ -360,7 +360,7 @@ Hero
   display: none;
 }
 
-.hero-info h1 {
+.hero-info h2 {
   letter-spacing: normal;
 }
 .hero-info h4 {
@@ -385,6 +385,12 @@ Hero
   .hero-img-container {
     display: block;
     position: relative;
+  }
+  .hero-info {
+    /* justify-self: start; */
+  }
+  .hero-info h2 {
+    font-size: 3rem;
   }
   .hero-img-container::before {
     content: '';
@@ -420,8 +426,58 @@ Hero
 About
 ===============
 */
-/* section title added to globals */
+.about-center {
+  display: grid;
+  gap: 3rem 2rem;
+}
+.about-img {
+  width: 20rem;
+  height: 30rem;
+  text-align: center;
+  justify-self: center;
+}
+.about-photo {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border: 0.125rem solid var(--clr-grey-10);
+  border-radius: var(--radius);
+}
+.about-info p {
+  text-align: justify;
+}
+.about-info .underline {
+  margin-left: 0;
+  margin-bottom: 1.25rem;
+}
 
+@media screen and (min-width: 768px) {
+  .about-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-info {
+    align-self: center;
+  }
+  .about-img {
+    position: relative;
+  }
+  .about-img::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0.25rem solid var(--clr-primary-5);
+    position: absolute;
+    top: 2rem;
+    left: -2rem;
+    border-radius: var(--radius);
+  }
+  .about-photo {
+    position: relative;
+  }
+}
 /*
 ===============
 Services
